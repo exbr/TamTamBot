@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8080D16A-B054-477A-975F-A30E79D9F6C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExLib.TamTam.Bot</RootNamespace>
+    <AssemblyName>ExLib.TamTam.Bot</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\ClientResponse.cs" />
+    <Compile Include="Client\ITamTamTransportClient.cs" />
+    <Compile Include="Client\OkHttpTransportClient.cs" />
+    <Compile Include="Client\TamTamClient.cs" />
+    <Compile Include="Data\ActionRequestBody.cs" />
+    <Compile Include="Data\Attachment.cs" />
+    <Compile Include="Data\AttachmentPayload.cs" />
+    <Compile Include="Data\AttachmentRequest.cs" />
+    <Compile Include="Data\AttachmentType.cs" />
+    <Compile Include="Data\AudioAttachment.cs" />
+    <Compile Include="Data\AudioAttachmentRequest.cs" />
+    <Compile Include="Data\BotAddedToChatUpdate.cs" />
+    <Compile Include="Data\BotCommand.cs" />
+    <Compile Include="Data\BotInfo.cs" />
+    <Compile Include="Data\BotPatch.cs" />
+    <Compile Include="Data\BotRemovedFromChatUpdate.cs" />
+    <Compile Include="Data\BotStartedUpdate.cs" />
+    <Compile Include="Data\Button.cs" />
+    <Compile Include="Data\ButtonType.cs" />
+    <Compile Include="Data\Callback.cs" />
+    <Compile Include="Data\CallbackAnswer.cs" />
+    <Compile Include="Data\CallbackButton.cs" />
+    <Compile Include="Data\CallbackConstructorInput.cs" />
+    <Compile Include="Data\Chat.cs" />
+    <Compile Include="Data\ChatAdminPermission.cs" />
+    <Compile Include="Data\ChatButton.cs" />
+    <Compile Include="Data\ChatList.cs" />
+    <Compile Include="Data\ChatMember.cs" />
+    <Compile Include="Data\ChatMembersList.cs" />
+    <Compile Include="Data\ChatPatch.cs" />
+    <Compile Include="Data\ChatStatus.cs" />
+    <Compile Include="Data\ChatTitleChangedUpdate.cs" />
+    <Compile Include="Data\ChatType.cs" />
+    <Compile Include="Data\ConstructedMessage.cs" />
+    <Compile Include="Data\ConstructorAnswer.cs" />
+    <Compile Include="Data\ConstructorInput.cs" />
+    <Compile Include="Data\ConstructorInputType.cs" />
+    <Compile Include="Data\ContactAttachment.cs" />
+    <Compile Include="Data\ContactAttachmentPayload.cs" />
+    <Compile Include="Data\ContactAttachmentRequest.cs" />
+    <Compile Include="Data\ContactAttachmentRequestPayload.cs" />
+    <Compile Include="Data\Error.cs" />
+    <Compile Include="Data\FileAttachment.cs" />
+    <Compile Include="Data\FileAttachmentPayload.cs" />
+    <Compile Include="Data\FileAttachmentRequest.cs" />
+    <Compile Include="Data\GetSubscriptionsResult.cs" />
+    <Compile Include="Data\Image.cs" />
+    <Compile Include="Data\InlineKeyboardAttachment.cs" />
+    <Compile Include="Data\InlineKeyboardAttachmentRequest.cs" />
+    <Compile Include="Data\InlineKeyboardAttachmentRequestPayload.cs" />
+    <Compile Include="Data\Intent.cs" />
+    <Compile Include="Data\Keyboard.cs" />
+    <Compile Include="Data\LinkButton.cs" />
+    <Compile Include="Data\LinkedMessage.cs" />
+    <Compile Include="Data\LocationAttachment.cs" />
+    <Compile Include="Data\LocationAttachmentRequest.cs" />
+    <Compile Include="Data\MediaAttachmentPayload.cs" />
+    <Compile Include="Data\Message.cs" />
+    <Compile Include="Data\MessageBody.cs" />
+    <Compile Include="Data\MessageCallbackUpdate.cs" />
+    <Compile Include="Data\MessageChatCreatedUpdate.cs" />
+    <Compile Include="Data\MessageConstructedUpdate.cs" />
+    <Compile Include="Data\MessageConstructionRequest.cs" />
+    <Compile Include="Data\MessageConstructorInput.cs" />
+    <Compile Include="Data\MessageCreatedUpdate.cs" />
+    <Compile Include="Data\MessageEditedUpdate.cs" />
+    <Compile Include="Data\MessageLinkType.cs" />
+    <Compile Include="Data\MessageList.cs" />
+    <Compile Include="Data\MessageRemovedUpdate.cs" />
+    <Compile Include="Data\MessageStat.cs" />
+    <Compile Include="Data\Method.cs" />
+    <Compile Include="Data\NewMessageBody.cs" />
+    <Compile Include="Data\NewMessageLink.cs" />
+    <Compile Include="Data\PhotoAttachment.cs" />
+    <Compile Include="Data\PhotoAttachmentPayload.cs" />
+    <Compile Include="Data\PhotoAttachmentRequestPayload.cs" />
+    <Compile Include="Data\PhotoToken.cs" />
+    <Compile Include="Data\PhotoTokens.cs" />
+    <Compile Include="Data\Recipient.cs" />
+    <Compile Include="Data\RequestContactButton.cs" />
+    <Compile Include="Data\RequestGeoLocationButton.cs" />
+    <Compile Include="Data\SenderAction.cs" />
+    <Compile Include="Data\SendMessageResult.cs" />
+    <Compile Include="Data\ShareAttachment.cs" />
+    <Compile Include="Data\ShareAttachmentPayload.cs" />
+    <Compile Include="Data\ShareAttachmentRequest.cs" />
+    <Compile Include="Data\SimpleQueryResult.cs" />
+    <Compile Include="Data\StickerAttachment.cs" />
+    <Compile Include="Data\StickerAttachmentPayload.cs" />
+    <Compile Include="Data\StickerAttachmentRequest.cs" />
+    <Compile Include="Data\StickerAttachmentRequestPayload.cs" />
+    <Compile Include="Data\Subscription.cs" />
+    <Compile Include="Data\SubscriptionRequestBody.cs" />
+    <Compile Include="Data\Update.cs" />
+    <Compile Include="Data\UpdateList.cs" />
+    <Compile Include="Data\UpdateType.cs" />
+    <Compile Include="Data\UploadedInfo.cs" />
+    <Compile Include="Data\UploadEndpoint.cs" />
+    <Compile Include="Data\UploadType.cs" />
+    <Compile Include="Data\User.cs" />
+    <Compile Include="Data\UserAddedToChatUpdate.cs" />
+    <Compile Include="Data\UserIdsList.cs" />
+    <Compile Include="Data\UserRemovedFromChatUpdate.cs" />
+    <Compile Include="Data\UserWithPhoto.cs" />
+    <Compile Include="Data\VideoAttachment.cs" />
+    <Compile Include="Data\VideoAttachmentRequest.cs" />
+    <Compile Include="Exceptions\AccessForbiddenException.cs" />
+    <Compile Include="Exceptions\APIException.cs" />
+    <Compile Include="Exceptions\AttachmentNotReadyException.cs" />
+    <Compile Include="Exceptions\ChatAccessForbiddenException.cs" />
+    <Compile Include="Exceptions\ClientException.cs" />
+    <Compile Include="Exceptions\RequiredParameterMissingException.cs" />
+    <Compile Include="Exceptions\SendMessageForbiddenException.cs" />
+    <Compile Include="Exceptions\ServiceNotAvailableException.cs" />
+    <Compile Include="Exceptions\TooManyRequestsException.cs" />
+    <Compile Include="Exceptions\TransportClientException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\AddMembersQuery.cs" />
+    <Compile Include="Queries\AnswerOnCallbackQuery.cs" />
+    <Compile Include="Queries\ConstructQuery.cs" />
+    <Compile Include="Queries\DeleteMessageQuery.cs" />
+    <Compile Include="Queries\EditChatQuery.cs" />
+    <Compile Include="Queries\EditMessageQuery.cs" />
+    <Compile Include="Queries\EditMyInfoQuery.cs" />
+    <Compile Include="Queries\GetAdminsQuery.cs" />
+    <Compile Include="Queries\GetChatQuery.cs" />
+    <Compile Include="Queries\GetChatsQuery.cs" />
+    <Compile Include="Queries\GetMembershipQuery.cs" />
+    <Compile Include="Queries\GetMembersQuery.cs" />
+    <Compile Include="Queries\GetMessageByIdQuery.cs" />
+    <Compile Include="Queries\GetMessagesQuery.cs" />
+    <Compile Include="Queries\GetMyInfoQuery.cs" />
+    <Compile Include="Queries\GetSubscriptionsQuery.cs" />
+    <Compile Include="Queries\GetUpdatesQuery.cs" />
+    <Compile Include="Queries\GetUploadUrlQuery.cs" />
+    <Compile Include="Queries\IQueryParam.cs" />
+    <Compile Include="Queries\ITamTamQuery.cs" />
+    <Compile Include="Queries\LeaveChatQuery.cs" />
+    <Compile Include="Queries\QueryParam.cs" />
+    <Compile Include="Queries\RemoveMemberQuery.cs" />
+    <Compile Include="Queries\SendActionQuery.cs" />
+    <Compile Include="Queries\SendMessageQuery.cs" />
+    <Compile Include="Queries\SubscribeQuery.cs" />
+    <Compile Include="Queries\TamTamQuery.cs" />
+    <Compile Include="Queries\UnsubscribeQuery.cs" />
+    <Compile Include="Queries\Upload\TamTamUploadAVQuery.cs" />
+    <Compile Include="Queries\Upload\TamTamUploadFileQuery.cs" />
+    <Compile Include="Queries\Upload\TamTamUploadQuery.cs" />
+    <Compile Include="TamTamBotAPI.cs" />
+    <Compile Include="TamTamUploadAPI.cs" />
+    <Compile Include="Queries\Upload\TamTamUploadImageQuery.cs" />
+    <Compile Include="Tools\EnumMemberAttribute.cs" />
+    <Compile Include="Tools\EnumMemberConverter.cs" />
+    <Compile Include="Tools\EnumTool.cs" />
+    <Compile Include="Tools\JsonCreationConverter.cs" />
+    <Compile Include="Version.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
